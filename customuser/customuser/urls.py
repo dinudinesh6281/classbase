@@ -1,5 +1,5 @@
 """
-URL configuration for project5 project.
+URL configuration for customuser project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -15,16 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,re_path
-from app.views import *
+from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Schoolvi/',Schoolvi.as_view(),name='Schoolvi'),
-    path('Schoolcreate/',Schoolcreate.as_view(),name='Schoolcreate'),
-
-    re_path('^update/(?P<pk>\d+)/',Schoolupdate.as_view(),name='Schoolupdate'),
-    re_path('^delete/(?P<pk>\d+)/',Schooldelete.as_view(),name='Schooldelete'),
-    re_path('(?P<pk>\d+)/',Schooldetv.as_view(),name='schooldetv'),
 ]
-

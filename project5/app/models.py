@@ -20,4 +20,3 @@ class Student(models.Model):
     sname=models.ForeignKey(School,on_delete=models.CASCADE,related_name='schoolstudent')
     def __str__(self):
         return self.stdname
-    

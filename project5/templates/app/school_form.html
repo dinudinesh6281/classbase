@@ -1,0 +1,20 @@
+<html>
+    <title>create</title>
+<body>
+    {% if form.instance.pk %}
+
+    <h1>School Update Form</h1>
+
+    {% else %}
+
+    <h1>School Create Form</h1>
+
+    {% endif %}
+    <form method='POST'>
+         {% csrf_token %}
+         {{ form.as_p}}
+         <input type='submit' value='create'>
+    </form>
+
+</body>
+</html>

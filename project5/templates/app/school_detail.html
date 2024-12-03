@@ -8,12 +8,14 @@
     <h1>detail view of schools {{ school }}</h1>
     <h1>name of school {{ school.sname }}</h1>
     <h1>name of principal {{ school.sprincipal }}</h1>
-
-        {% for st in school.schoolstudent.all %}
+    
+    {% for st in school.schoolstudent.all %}
     <h1>name of student {{ st.stdname }}</h1>
     <h1>age of stdent {{ st.stdage }}</h1>
-       
-        {% endfor %}
-
+    {% endfor %}
+    
+    
+    <a href='{% url 'Schoolupdate' pk=school.pk %}'>update</a>  <br>
+    <a href='{% url 'Schooldelete' pk=school.pk %}'>Delete</a>
 </body>
 </html>
